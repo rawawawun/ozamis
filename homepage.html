@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Homepage</title>
+    <style>
+        /* CSS for the navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        /* CSS for the about-me section */
+        .about-me {
+            background-color: lightblue;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-family: 'Times New Roman', Times, serif;
+            transition: transform 0.3s ease;
+        }
+
+
+        .about-me:hover {
+            transition: 0.5s ease;
+            background-color: pink;
+            transition-delay: 0.1s;
+            transition-duration: 1s;
+            cursor: pointer;
+        }
+
+        .caption {
+            color: white;
+        }
+
+        /* CSS for the label section */
+        .label {
+            background-color: lightgray;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .article-label {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* CSS for the animations */
+        .navbar a {
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            transform: scale(1.1);
+        }
+
+        /* CSS for the sections */
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-gap: 20px;
+        }
+
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .grid-item img,
+        .grid-item video {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover img,
+        .grid-item:hover video {
+            transform: scale(1.1);
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 950px;
+            height: 50px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            font-size: 15px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .grid-item:hover .caption {
+            opacity: 1;
+        }
+
+        .video-item {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+        }
+
+        .video-item video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#about" onclick="showSection('about')">ABOUT ME</a>
+        <a href="#newsfeed" onclick="showSection('newsfeed')">NEWSFEED</a>
+        <a href="#media" onclick="showSection('media')">PHOTOS & VIDEOS</a>
+        <a href="index.html" onclick="logout()">LOGOUT</a>
+    </div>
+
+    <div id="about" class="section active">
+        <div class="about-me">
+            <h2>
+                <center>ABOUT ME</center>
+            </h2>
+            <div class="profile-picture">
+                <center><img src="angkol.jpg" alt="Profile Photo" style="width: 800px">
+                    <div class="caption">
+                        <p>I'm Rowaon, Yasser E., a 19-year-old currently studying at TCGC Tangub City Global College,
+                            pursuing a Bachelor of Science in Computer Science. I am passionately wants to learn and
+                            approach the goal that I have been set long time a go. By seeing me less, it means Im doing
+                            MORE.
+                    </div>
+                    </p>
+                </center>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="newsfeed" class="section">
+        <div class="label">
+            <img src="Lux mundi Cup.jpg" alt="/photos.jpg/Lux mundi Cup.jpg" style="width: 910px">
+            <center>
+                <h1>Welcome!</h1>
+                <h3>Feel free to look around and enjoy!</h3>
+            </center>
+            <p class="article-label">Before the intramurals or what we called "Lux Mundi Cup" started. I asked one of my
+                fellow comrades/Friends if what is the essence or what they feel and what is the meaning of this event
+                for them and one of them answered...</p>
+            <img src="Luminance.jpg" alt="/photos.jpg/Luminance.jpg" style="width: 910px; height: 750px">
+            <p class="article-label">The Lux Mundi Cup is an annual intramural sports event that brings together
+                participants from various backgrounds to engage in friendly competition. Named after "Lux Mundi," Latin
+                for "Light of the World," the cup embodies the spirit of illumination and unity through sports. It
+                features a range of athletic activities, fostering teamwork, sportsmanship, and a sense of community
+                among participants. The Lux Mundi Cup goes beyond the competition, creating an inclusive platform where
+                individuals can showcase their skills, build lasting connections, and contribute to a vibrant and
+                spirited atmosphere.</p>
+            <p class="article-label">Participating in Lux Mundi Cup intramurals was an exhilarating journey. From the
+                intense matches to the camaraderie with fellow competitors, every moment was a testament to the spirit
+                of sportsmanship. Whether scoring goals or cheering for teammates, the atmosphere was electric, making
+                each game a memorable ex
+                YASSER replied to themself
+                YASSER ROWAON
+                memorable experience. The sense of pride and unity among participants created a lasting bond, turning
+                Lux Mundi Cup into more than just a competition—it became a celebration of teamwork and shared passion
+                for sports.</p>
+        </div>
+    </div>
+
+    <div id="media" class="section">
+        <div class="label">
+            <center>
+                <h2>Photos and Videos</h2>
+            </center>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="Lux mundi Cup.jpg" alt="Photo 1">
+                    <div class="caption"></div>
+                </div>
+                <div class="grid-item">
+                    <img src="Luminance.jpg" alt="Photo 2">
+                    <div class="caption"></div>
+                </div>
+                <div class="grid-item">
+                    <img src="Cheerdance.jpg" alt="Photo 3">
+                    <div class="caption"></div>
+                </div>
+                <div class="grid-item">
+                    <img src="Cheerdancers.jpg" alt="Photo 4">
+                    <div class="caption">Breathtaking performance from our institute, deriving their Egos. Well
+                        performed and Goosebumps performance. Hardworks and motivated to be the light of the world.
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="sayaw.jpg" alt="Photo 5">
+                    <div class="caption"></div>
+                </div>
+                <div class="grid-item">
+                    <img src="Dancesporters.jpg" alt="Photo 6">
+                    <div class="caption">Captivating the tapestry of experience and unforgettable moments. Deriving the
+                        vibes music and luminance vibes. Luminating ang capturing
+                        each step outgrowing each moves. </div>
+                </div>
+                <div class="grid-item">
+                    <img src="Mr. and Ms.jpg" alt="Photo 7">
+                    <div class="caption"></div>
+                </div>
+                <div class="grid-item">
+                    <img src="Mr and Ms Participants.jpg" alt="Photo 8">
+                    <div class="caption">Powerful presence and illuminating egos of Mr and Ms TCGC. Powerful presence
+                        and illuminating egos of Mr and Ms TCGC. Rampaging the stage, Luminating the audience and
+                        goosebumps competitive performance.</div>
+                </div>
+                <div class="grid-item">
+                    <div class="video-item">
+                        <video src="hahaha.mp4" controls></video>
+                        <div class="caption">Caption for Video 2</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const navbarLinks = document.querySelectorAll('.navbar a');
+        const sections = document.querySelectorAll('.section');
+
+        navbarLinks.forEach(link => {
+            link.addEventListener('mouseover', () => {
+                link.style.transform = 'scale(1.1)';
+            });
+
+            link.addEventListener('mouseout', () => {
+                link.style.transform = 'scale(1)';
+            });
+        });
+
+        function showSection(sectionId) {
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            const sectionToShow = document.getElementById(sectionId);
+            sectionToShow.classList.add('active');
+        }
+
+        function logout() {
+            // Add your logout functionality here
+        }
+    </script>
+</body>
+
+</html>
